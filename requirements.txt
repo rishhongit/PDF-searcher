@@ -1,0 +1,9 @@
+# Install all this libraries before running the code.
+# Use pip intall -r requirements.txt for faster download.
+
+chromadb
+langchain
+PyPDF2
+python-dotenv
+tiktoken
+streamlit
