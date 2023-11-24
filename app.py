@@ -6,7 +6,7 @@ from langchain import vectorstores
 from langchain import chains
 # from goose3 import Goose
 import streamlit as st
-from langchain.lms import AI21 
+from langchain.llms import AI21 
 from langchain import embeddings
 llm = AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
 
