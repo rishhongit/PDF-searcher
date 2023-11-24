@@ -6,9 +6,9 @@ from langchain import vectorstores
 from langchain import chains
 # from goose3 import Goose
 import streamlit as st
-from langchain.llms import AI21
-from langchain.embeddings import HuggingFaceEmbeddings
-llm = AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
+from langchain import llms 
+from langchain import embeddings
+llm = llms.AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
 
 def main():
     st.set_page_config(page_title="Upload PDF")
@@ -30,7 +30,7 @@ def main():
             chunk_overlap = 0
         )
             chunks = text_splitter.split_text(texts)
-            embeddings = HuggingFaceEmbeddings()
+            embeddings = embeddings.HuggingFaceEmbeddings()
             db = vectorstores.Chroma.from_texts(chunks, embeddings)
             retriever = db.as_retriever(search_type="similarity", search_kwargs={"k":10})
             qa = chains.ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
