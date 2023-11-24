@@ -2,7 +2,7 @@
 # Use pip intall -r requirements.txt for faster download.
 pydantic==1.10.12
 chromadb
-langchain
+langchain==0.0.339
 PyPDF2
 python-dotenv
 streamlit
