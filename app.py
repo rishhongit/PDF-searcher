@@ -7,7 +7,7 @@ from langchain import chains
 # from goose3 import Goose
 import streamlit as st
 from langchain import llms 
-from langchain.embeddings from HuggingFaceEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 llm = llms.AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
 
 def main():
@@ -30,7 +30,7 @@ def main():
             chunk_overlap = 0
         )
             chunks = text_splitter.split_text(texts)
-            embeddings = embeddings.HuggingFaceEmbeddings()
+            embeddings = HuggingFaceEmbeddings()
             db = vectorstores.Chroma.from_texts(chunks, embeddings)
             retriever = db.as_retriever(search_type="similarity", search_kwargs={"k":10})
             qa = chains.ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
