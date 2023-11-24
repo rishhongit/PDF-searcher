@@ -1,6 +1,6 @@
 # Install all this libraries before running the code.
 # Use pip intall -r requirements.txt for faster download.
-
+pydantic==1.10.12
 chromadb
 langchain
 PyPDF2
