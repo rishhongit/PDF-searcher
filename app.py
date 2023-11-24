@@ -6,9 +6,9 @@ from langchain import vectorstores
 from langchain import chains
 # from goose3 import Goose
 import streamlit as st
-from langchain import llms 
+from langchain.lms import AI21 
 from langchain import embeddings
-llm = llms.AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
+llm = AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
 
 def main():
     st.set_page_config(page_title="Upload PDF")
