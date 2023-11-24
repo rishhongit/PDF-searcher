@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain import vectorstores
-from langchain.chains import ConversationalRetrievalChain
+from langchain import chains
 # from goose3 import Goose
 import streamlit as st
 from langchain.llms import AI21
@@ -33,7 +33,7 @@ def main():
             embeddings = HuggingFaceEmbeddings()
             db = vectorstores.Chroma.from_texts(chunks, embeddings)
             retriever = db.as_retriever(search_type="similarity", search_kwargs={"k":10})
-            qa = ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
+            qa = chains.ConversationalRetrievalChain.from_llm(llm=llm, retriever=retriever)
             chat_history = []
             query = st.text_input("Ask a question in PDF")
             if query:
