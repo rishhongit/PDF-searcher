@@ -7,7 +7,7 @@ from langchain import chains
 # from goose3 import Goose
 import streamlit as st
 from langchain import llms 
-from langchain import embeddings
+from langchain.embeddings from HuggingFaceEmbeddings
 llm = llms.AI21(ai21_api_key='diNNQzvL40ZnBnEQkIBwNESWjtj792NG')
 
 def main():
