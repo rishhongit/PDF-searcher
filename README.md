@@ -1,6 +1,6 @@
 # Query Harbor
 
-QueryHarbor is an AI-powered tool that allows users to upload PDF documents and ask questions about their content. Using advanced natural language processing, it provides quick, accurate answers, streamlining document analysis for professionals and researchers across various fields.
+It is an AI-powered tool that allows users to upload PDF documents and ask questions about their content. Using advanced natural language processing, it provides quick, accurate answers, streamlining document analysis for professionals and researchers across various fields.
 
 ## Features
 
